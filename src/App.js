@@ -1,12 +1,14 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>React app</h1>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+    </>
   );
-}
+};
 
 export default App;
