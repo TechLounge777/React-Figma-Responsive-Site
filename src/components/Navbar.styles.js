@@ -35,8 +35,12 @@ export const Menu = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px);
+      background-color: rgba(255, 255, 255, 0.4);
+    }
     border-radius: 1rem;
     box-shadow: -4px 8px 15px 1px rgba(0, 0, 0, 0.07);
     overflow: hidden;
@@ -81,8 +85,8 @@ export const Button = styled.button`
   color: #fff;
   border-radius: 1rem;
   box-shadow: 0px 13px 24px -7px #ecb6d7;
-  transition: all 0.3s ease-in;
-  margin-left: 0%.5rem;
+  transition: all 0.3s ease-in-out;
+  margin-left: 0.5rem;
   cursor: pointer;
 
   &:hover {
@@ -91,7 +95,7 @@ export const Button = styled.button`
   }
 
   @media (max-width: 670px) {
-    /*padding: 0.3rem;*/
+    padding: 0.3rem;
   }
 `;
 
